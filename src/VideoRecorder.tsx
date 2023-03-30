@@ -23,11 +23,15 @@ const VideoRecorder = () => {
     if ("MediaRecorder" in window) {
       try {
         const videoConstraints = {
-          audio: true,
+          audio: false,
           video: true,
         };
-        // create audio and video streams separately
+        const audioConstraints = { audio: true };
 
+        // create audio and video streams separately
+        const audioStream = await navigator.mediaDevices.getUserMedia(
+          audioConstraints
+        );
         const videoStream = await navigator.mediaDevices.getUserMedia(
           videoConstraints
         );
@@ -38,6 +42,7 @@ const VideoRecorder = () => {
 
         const combinedStream = new MediaStream([
           ...videoStream.getVideoTracks(),
+          ...audioStream.getAudioTracks(),
         ]);
 
         setStream(combinedStream);
