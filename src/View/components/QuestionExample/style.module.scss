@@ -1,0 +1,85 @@
+@import '../../../../../../scss/vars.scss';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  & > :not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.wrap_arrow {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  padding-top: 6px;
+
+  .id_text {
+    color: #fbc333;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    padding-right: 2px;
+  }
+}
+
+.content {
+  .textWrapper {
+    display: flex;
+    flex-direction: column;
+    & > :not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .text {
+    background-color: unset;
+    border: unset;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 500;
+    color: $suItemsInSubList;
+    &:focus {
+      outline: none;
+      color: $whiteColor;
+    }
+  }
+
+  .description {
+    background-color: unset;
+    border: unset;
+    overflow: hidden;
+    resize: none;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: $suItemsInSubList;
+    height: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .inscription {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.3;
+    color: $whiteColor;
+    margin-bottom: 20px;
+  }
+
+  .btnWrapper {
+    display: flex;
+    column-gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  .bottomInscription {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 2.4;
+    color: $suItemsInSubList;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,45 @@
+@import '../../../../scss/vars.scss';
+
+.content {
+  width: 70%;
+  margin: 30px 20px 0px 20px;
+
+  .wrapper {
+    background: $backgroundColor;
+    border-radius: 16px;
+    isolation: isolate;
+    padding: 138px 75.5px;
+    position: relative;
+    overflow: hidden;
+
+    &.answer {
+      padding: 0;
+    }
+
+    .strip {
+      position: absolute;
+      width: 99%;
+      height: 4px;
+      background: #fbc333;
+      opacity: 0.3;
+      border-radius: 16px 16px 0 0;
+      top: 0px;
+      left: 6px;
+      @media (max-width: 1550px) {
+        width: 98%;
+      }
+      &.answer {
+        display: none;
+      }
+    }
+
+    .wrap {
+      width: 100%;
+    }
+
+    .wrap.answer {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

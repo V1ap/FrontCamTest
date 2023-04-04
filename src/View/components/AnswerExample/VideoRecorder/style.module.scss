@@ -1,0 +1,311 @@
+// BASE COLORS
+$backgroundColor: #36393f;
+$backgroundColorPrimary: #2f3136;
+$primaryColor: #e30611;
+$errorColor: #f95721;
+$buttonHoverColor: #c90000;
+$buttonActiveColor: #f51d16;
+$footerBackgroundColor: #aeb0b3;
+$dangerAlertColor: rgba(255, 228, 233, 0.5);
+$successAlertColor: rgba(232, 250, 235, 0.5);
+$notificationColor: #ed7274;
+$secondaryGigas: #8e3c72;
+
+// COLORS
+$whiteColor: #ffffff;
+$whiteThreeColor: #f7f7f7;
+$whiteSmokeColor: #f2f3f7;
+$lightGrayishBlue: #e9ebf7;
+$linkWaterColor: #e2e5eb;
+$lightestRaspberryColor: #ffe4e9;
+$lightBlueGreyColor: #d0d6da;
+$greyHeatherColor: #bbc1c7;
+$brownGreyColor: #b3b3b3;
+$greyTertiary: #40444b;
+$greyChateauColor: #9198a0;
+$greyHover: #aaabad;
+$greyRavenColor: #8e9297;
+$brownishGreyColor: #666666;
+$suItemsInSubList: #95999e;
+$darkGrayColor: #626c77;
+$lightGrayColor: #969fa8;
+$lightBlackberryColor: #6384e0;
+$normalBlackberryColor: #014fce;
+$darkBlackberryColor: #003db7;
+$lightestBlackberryColor: #e7eafa;
+$normalBlueberryColor: #0097fd;
+$darkBlueberryColor: #0077db;
+$midnightBlueColor: #202d3d;
+$deepBlueColor: #001424;
+$pitchBlackColor: #000000;
+$blackLetters: #2f3136;
+$lightBlackColor: #1d2023;
+$lightestYellowColor: #fffde8;
+$normalMintColor: #00c19b;
+$lightMintColor: #00d9bc;
+$lightenMintColor: #c5ede7;
+$darkMintColor: #03a17b;
+$darkAppleColor: #04aa42;
+$lightPlumColor: #a86ea7;
+$darkPlumColor: #6d2d79;
+$darkRaspberryColor: #c51345;
+$megaBrightBlue: #d4dbf0;
+$ultraBrightBlue: #45b6fc;
+$blueButtonNormal: #007cff;
+$normalYellowColor: #fcd570;
+$warningColor: #fac031;
+$yellowBackground: #fbc333;
+$lightOrangeColor: #fa8a64;
+$normalOrangeColor: #f95721;
+$darkOrangeColor: #e04a17;
+$blue-33-color: #33769d;
+$textTertiary: #dbdcdd;
+$successColor: #4fdc7c;
+$toastBackgroundDark: #2b2d32;
+$strawberryRed: #d2303e;
+
+// SOCIAL MEDIA COLORS
+$vkColor: #4680c2;
+$fbColor: #1877f2;
+$twColor: #1da1f2;
+$okColor: #f7931e;
+
+//SIZES
+$formElementsHeight: 44px;
+$headerMobileHeight: 56px;
+$headerDesktopHeight: 72px;
+$viewportMobileMinWidth: 280px;
+$customFooterHeight: 96px;
+$contentWidth: 592px;
+
+// ANIMATION
+$transitionPrimary: 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+$transitionButton: color $transitionPrimary, background $transitionPrimary,
+  border $transitionPrimary;
+
+// SHADOWS
+$primaryBoxShadow: 0 2px 8px 0 $lightestBlackberryColor;
+$insetBoxShadow: inset 0 2px 8px -5px $lightestBlackberryColor;
+$flightPreviewBoxShadow: 0 0 27px -5px $greyHeatherColor;
+$headerBoxShadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+
+// Z-INDEXES
+$modalZIndex: 2147483000;
+$slideModalZIndex: 2147482000;
+$pushZIndex: 2147481000;
+
+button {
+  border: none;
+  background: none;
+}
+
+.blackScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #070002;
+  z-index: 3;
+
+  .timerOfStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+
+    .getReady {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $whiteColor;
+    }
+
+    .timerStart {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 52px;
+      color: $strawberryRed;
+    }
+  }
+}
+
+.videoControls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .topControls {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 76px;
+    justify-content: center;
+    align-items: center;
+
+    .muteMicro,
+    .switchCam {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .muteMicroBtn,
+    .switchCamBtn {
+      padding: 7px;
+      background-color: $lightBlackColor;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform, 0.1s ease;
+    }
+
+    .muteMicroBtn:active,
+    .switchCamBtn:active {
+      transform: scale(1.1);
+    }
+    .muteMicroText,
+    .switchCamText {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $whiteColor;
+    }
+  }
+
+  .bottomControls {
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: 40px;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &.recording {
+      flex-direction: column-reverse;
+      right: calc(50% - 50px);
+    }
+
+    .startVideo {
+      width: 80px;
+      height: 80px;
+      background-color: $strawberryRed;
+      margin-left: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .stopVideo {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-color: $suItemsInSubList;
+      opacity: 50%;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .stopVideo::before {
+      position: absolute;
+      background-color: $strawberryRed;
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      top: calc(50% - 24px);
+      left: calc(50% - 24px);
+      content: "";
+    }
+
+    .closeBtn {
+      cursor: pointer;
+    }
+
+    .timerOfEnd {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      .redDot {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: $strawberryRed;
+      }
+
+      .timerEnd {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        color: $strawberryRed;
+      }
+    }
+  }
+}
+
+.recordedControls {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .controlsQuestion {
+    margin-bottom: 24px;
+    color: $whiteColor;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  .recordedBtns {
+    display: flex;
+    gap: 16px;
+
+    .acceptlBtn,
+    .cancelBtn {
+      padding: 8px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .cancelBtn {
+      background-color: $greyTertiary;
+      color: $whiteColor;
+    }
+
+    .acceptlBtn {
+      background-color: $yellowBackground;
+      color: $blackLetters;
+    }
+  }
+}
+
+.videoPlayer,
+.recordedPlayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.livePlayer,
+.recordedPlayer video {
+  min-height: 560px;
+  height: auto;
+  max-height: 100%;
+  width: 100%;
+}
