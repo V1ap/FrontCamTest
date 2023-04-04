@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./style.module.scss";
 import { MicroIcon } from "./icons/MicroIcon";
 import { SwitchCam } from "./icons/SwitchCamIcon";
-import { CloseIcon } from "./icons/closeIcon";
+import { CloseIcon } from "./icons/CloseIcon";
 
 const mimeType = 'video/webm; codecs="opus,vp8"';
 
